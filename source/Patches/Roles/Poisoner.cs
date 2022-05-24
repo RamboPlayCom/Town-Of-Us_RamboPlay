@@ -16,9 +16,9 @@ namespace TownOfUs.Roles
 
         public Poisoner(PlayerControl player) : base(player)
         {
-            Name = "Poisoner";
-            ImpostorText = () => "Poison a crewmate to kill them in a few seconds";
-            TaskText = () => "Poison the crewmates";
+            Name = "绝命毒师";
+            ImpostorText = () => "寄汤来啦~哈哈哈~";
+            TaskText = () => "给其它船员下毒";
             Color = Palette.ImpostorRed;
             LastPoisoned = DateTime.UtcNow;
             RoleType = RoleEnum.Poisoner;

@@ -82,7 +82,7 @@ namespace TownOfUs
                     writer.Write(target.PlayerId);
                     AmongUsClient.Instance.FinishRpcImmediately(writer);
 
-                    System.Console.WriteLine(CustomGameOptions.ShieldBreaks + "- shield break");
+                    System.Console.WriteLine(CustomGameOptions.ShieldBreaks + "- 护盾破碎");
                     if (CustomGameOptions.ShieldBreaks) PlayerControl.LocalPlayer.SetKillTimer(PlayerControl.GameOptions.KillCooldown);
                     else PlayerControl.LocalPlayer.SetKillTimer(0.01f);
                     StopKill.BreakShield(target.GetMedic().Player.PlayerId, target.PlayerId, CustomGameOptions.ShieldBreaks);

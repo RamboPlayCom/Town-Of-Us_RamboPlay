@@ -27,7 +27,7 @@ namespace TownOfUs.Roles
 
         public Glitch(PlayerControl owner) : base(owner)
         {
-            Name = "The Glitch";
+            Name = "混沌";
             Color = Patches.Colors.Glitch;
             LastHack = DateTime.UtcNow;
             LastMimic = DateTime.UtcNow;
@@ -40,8 +40,8 @@ namespace TownOfUs.Roles
             IsUsingMimic = false;
             RoleType = RoleEnum.Glitch;
             AddToRoleHistory(RoleType);
-            ImpostorText = () => "You are the glitch";
-            TaskText = () => "Murder players as the Glitch:";
+            ImpostorText = () => "全部都得死";
+            TaskText = () => "作为混沌杀死所有人:";
             Faction = Faction.Neutral;
         }
 
@@ -254,7 +254,7 @@ namespace TownOfUs.Roles
                 hackText = new GameObject("_Player").AddComponent<ImportantTextTask>();
                 hackText.transform.SetParent(PlayerControl.LocalPlayer.transform, false);
                 hackText.Text =
-                    $"{__instance.ColorString}Hacked {hackPlayer.Data.PlayerName} ({CustomGameOptions.HackDuration}s)</color>";
+                    $"{__instance.ColorString}黑掉了 {hackPlayer.Data.PlayerName} ({CustomGameOptions.HackDuration}s)</color>";
                 hackText.Index = hackPlayer.PlayerId;
                 tickDictionary.Add(hackPlayer.PlayerId, DateTime.UtcNow);
                 PlayerControl.LocalPlayer.myTasks.Insert(0, hackText);
@@ -352,7 +352,7 @@ namespace TownOfUs.Roles
                     var totalHacktime = (DateTime.UtcNow - tickDictionary[hackPlayer.PlayerId]).TotalMilliseconds /
                                         1000;
                     hackText.Text =
-                        $"{__instance.ColorString}Hacked {hackPlayer.Data.PlayerName} ({CustomGameOptions.HackDuration - Math.Round(totalHacktime)}s)</color>";
+                        $"{__instance.ColorString}黑掉了 {hackPlayer.Data.PlayerName} ({CustomGameOptions.HackDuration - Math.Round(totalHacktime)}s)</color>";
                     if (MeetingHud.Instance || totalHacktime > CustomGameOptions.HackDuration || hackPlayer == null ||
                         hackPlayer.Data.IsDead)
                     {
@@ -400,7 +400,7 @@ namespace TownOfUs.Roles
                 var mimicText = new GameObject("_Player").AddComponent<ImportantTextTask>();
                 mimicText.transform.SetParent(PlayerControl.LocalPlayer.transform, false);
                 mimicText.Text =
-                    $"{__instance.ColorString}Mimicking {mimicPlayer.Data.PlayerName} ({CustomGameOptions.MimicDuration}s)</color>";
+                    $"{__instance.ColorString} 化形成 {mimicPlayer.Data.PlayerName} ({CustomGameOptions.MimicDuration}s)</color>";
                 PlayerControl.LocalPlayer.myTasks.Insert(0, mimicText);
 
                 while (true)
@@ -413,7 +413,7 @@ namespace TownOfUs.Roles
                         totalMimickTime = CustomGameOptions.MimicDuration;
                     }
                     mimicText.Text =
-                        $"{__instance.ColorString}Mimicking {mimicPlayer.Data.PlayerName} ({CustomGameOptions.MimicDuration - Math.Round(totalMimickTime)}s)</color>";
+                        $"{__instance.ColorString} 化形成 {mimicPlayer.Data.PlayerName} ({CustomGameOptions.MimicDuration - Math.Round(totalMimickTime)}s)</color>";
                     if (totalMimickTime > CustomGameOptions.MimicDuration ||
                         PlayerControl.LocalPlayer.Data.IsDead ||
                         AmongUsClient.Instance.GameState == InnerNetClient.GameStates.Ended)
@@ -621,7 +621,7 @@ namespace TownOfUs.Roles
                             writer2.Write(PlayerControl.LocalPlayer.PlayerId);
                             AmongUsClient.Instance.FinishRpcImmediately(writer2);
 
-                            System.Console.WriteLine(CustomGameOptions.ShieldBreaks + "- shield break");
+                            System.Console.WriteLine(CustomGameOptions.ShieldBreaks + "- 护盾破碎");
                             if (CustomGameOptions.ShieldBreaks)
                                 __gInstance.LastHack = DateTime.UtcNow;
                             StopKill.BreakShield(PlayerControl.LocalPlayer.GetMedic().Player.PlayerId, PlayerControl.LocalPlayer.PlayerId, CustomGameOptions.ShieldBreaks);

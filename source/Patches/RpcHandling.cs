@@ -483,7 +483,7 @@ namespace TownOfUs
                         readSByte2 = reader.ReadSByte();
                         SwapVotes.Swap2 =
                             MeetingHud.Instance.playerStates.FirstOrDefault(x => x.TargetPlayerId == readSByte2);
-                        PluginSingleton<TownOfUs>.Instance.Log.LogMessage("Bytes received - " + readSByte + " - " +
+                        PluginSingleton<TownOfUs>.Instance.Log.LogMessage("接收到字节 - " + readSByte + " - " +
                                                                           readSByte2);
                         break;
                     case CustomRPC.Remember:
@@ -891,7 +891,7 @@ namespace TownOfUs
                         {
                             PlayerControl.LocalPlayer.MyPhysics.ResetMoveState();
                         }
-                        System.Console.WriteLine("Become Phantom - Users");
+                        System.Console.WriteLine("变成幻影的玩家");
                         break;
                     case CustomRPC.CatchPhantom:
                         var phantomPlayer = Utils.PlayerById(reader.ReadByte());
@@ -960,7 +960,7 @@ namespace TownOfUs
         {
             public static void Postfix()
             {
-                PluginSingleton<TownOfUs>.Instance.Log.LogMessage("RPC SET ROLE");
+                PluginSingleton<TownOfUs>.Instance.Log.LogMessage("RPC 设置角色");
                 var infected = GameData.Instance.AllPlayers.ToArray().Where(o => o.IsImpostor());
 
                 Utils.ShowDeadBodies = false;
