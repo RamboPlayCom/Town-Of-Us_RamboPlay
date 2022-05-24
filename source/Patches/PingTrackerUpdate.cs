@@ -19,9 +19,9 @@ namespace TownOfUs
                 "<color=#00FF00FF>我们的小镇 v" + TownOfUs.VersionString + "</color>\n" +
                 $"延迟: {AmongUsClient.Instance.Ping}毫秒\n" +
                 (!MeetingHud.Instance
-                    ? "<color=#1a75ff>本地帽子 兰博玩对战（内测）</color>" +
+                    ? "<color=#1a75ff>本地帽子</color>" : "") +
                 (AmongUsClient.Instance.GameState != InnerNet.InnerNetClient.GameStates.Started
-                    ? "<color=#1a75ff>本地帽子 兰博玩对战（内测）</color>" : "");
+                    ? "<color=#1a75ff>兰博玩对战（内测）</color>" : "");
         }
     }
 }
