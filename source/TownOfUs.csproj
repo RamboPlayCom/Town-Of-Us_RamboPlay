@@ -12,7 +12,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="Reactor" Version="1.0.0-rc.1" />
-		<PackageReference Include="Reactor.MSBuild" Version="0.1.5" />
 	</ItemGroup>
 
 	<Target Name="Copy" AfterTargets="Build" Condition="exists('$(COPY)')">
