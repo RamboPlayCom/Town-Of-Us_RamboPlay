@@ -254,7 +254,7 @@ namespace TownOfUs.Roles
                 hackText = new GameObject("_Player").AddComponent<ImportantTextTask>();
                 hackText.transform.SetParent(PlayerControl.LocalPlayer.transform, false);
                 hackText.Text =
-                    $"{__instance.ColorString}黑掉了 {hackPlayer.Data.PlayerName} ({CustomGameOptions.HackDuration}s)</color>";
+                    $"{__instance.ColorString} 锁住了 {hackPlayer.Data.PlayerName} ({CustomGameOptions.HackDuration}s)</color>";
                 hackText.Index = hackPlayer.PlayerId;
                 tickDictionary.Add(hackPlayer.PlayerId, DateTime.UtcNow);
                 PlayerControl.LocalPlayer.myTasks.Insert(0, hackText);
@@ -352,7 +352,7 @@ namespace TownOfUs.Roles
                     var totalHacktime = (DateTime.UtcNow - tickDictionary[hackPlayer.PlayerId]).TotalMilliseconds /
                                         1000;
                     hackText.Text =
-                        $"{__instance.ColorString}黑掉了 {hackPlayer.Data.PlayerName} ({CustomGameOptions.HackDuration - Math.Round(totalHacktime)}s)</color>";
+                        $"{__instance.ColorString} 锁住了 {hackPlayer.Data.PlayerName} ({CustomGameOptions.HackDuration - Math.Round(totalHacktime)}s)</color>";
                     if (MeetingHud.Instance || totalHacktime > CustomGameOptions.HackDuration || hackPlayer == null ||
                         hackPlayer.Data.IsDead)
                     {

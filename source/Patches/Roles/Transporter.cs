@@ -33,9 +33,9 @@ namespace TownOfUs.Roles
         
         public Transporter(PlayerControl player) : base(player)
         {
-            Name = "Transporter";
-            ImpostorText = () => "Choose two players to swap locations";
-            TaskText = () => "Choose two players to swap locations";
+            Name = "传送师";
+            ImpostorText = () => "空 间 错 乱";
+            TaskText = () => "选择两个玩家交换他们的位置";
             Color = Patches.Colors.Transporter;
             LastTransported = DateTime.UtcNow;
             RoleType = RoleEnum.Transporter;

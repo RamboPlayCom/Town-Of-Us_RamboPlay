@@ -10,7 +10,7 @@ namespace TownOfUs.Roles
         public Medic(PlayerControl player) : base(player)
         {
             Name = "医生";
-            ImpostorText = () => "通过护盾来保护船员";
+            ImpostorText = () => "医生现状.mp4";
             TaskText = () => "通过护盾来保护船员";
             Color = Patches.Colors.Medic;
             RoleType = RoleEnum.Medic;

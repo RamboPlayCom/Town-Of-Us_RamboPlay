@@ -11,14 +11,14 @@ namespace TownOfUs.Roles
     {
         public Juggernaut(PlayerControl owner) : base(owner)
         {
-            Name = "Juggernaut";
+            Name = "天启";
             Color = Patches.Colors.Juggernaut;
             LastKill = DateTime.UtcNow;
             KillTarget = null;
             RoleType = RoleEnum.Juggernaut;
             AddToRoleHistory(RoleType);
-            ImpostorText = () => "With each kill your kill cooldown decreases";
-            TaskText = () => "Your power grows with every kill!";
+            ImpostorText = () => "越杀越想杀";
+            TaskText = () => "杀的人越多，冷却越短。";
             Faction = Faction.Neutral;
         }
 

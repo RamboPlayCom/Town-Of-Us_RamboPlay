@@ -7,8 +7,8 @@ namespace TownOfUs.Roles
         public Engineer(PlayerControl player) : base(player)
         {
             Name = "工程师";
-            ImpostorText = () => "啊哈！修Maker~";
-            TaskText = () => "Vent and fix a sabotage from anywhere!";
+            ImpostorText = () => "大锤八十";
+            TaskText = () => "随时修理船上的设备破坏";
             Color = Patches.Colors.Engineer;
             RoleType = RoleEnum.Engineer;
             AddToRoleHistory(RoleType);
