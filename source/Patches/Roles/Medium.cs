@@ -15,9 +15,9 @@ namespace TownOfUs.Roles
         
         public Medium(PlayerControl player) : base(player)
         {
-            Name = "Medium";
-            ImpostorText = () => "Gain info from dead players";
-            TaskText = () => "Gain info from dead players";
+            Name = "通灵师";
+            ImpostorText = () => "亡魂会告诉你";
+            TaskText = () => "通过与鬼魂互动获取信息。";
             Color = Patches.Colors.Medium;
             LastMediated = DateTime.UtcNow;
             RoleType = RoleEnum.Medium;

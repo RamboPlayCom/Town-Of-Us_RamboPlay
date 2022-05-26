@@ -276,13 +276,13 @@ namespace TownOfUs.Roles
             {
                 var task = new GameObject(Name + "Task").AddComponent<ImportantTextTask>();
                 task.transform.SetParent(Player.transform, false);
-                task.Text = $"{ColorString}角色: {Name}\n{TaskText()}</color>";
+                task.Text = $"{ColorString}职业：{Name}\n{TaskText()}</color>";
                 Player.myTasks.Insert(0, task);
                 return;
             }
 
             Player.myTasks.ToArray()[0].Cast<ImportantTextTask>().Text =
-                $"{ColorString}角色: {Name}\n{TaskText()}</color>";
+                $"{ColorString}职业：{Name}\n{TaskText()}</color>";
         }
 
         public static T Gen<T>(Type type, PlayerControl player, CustomRPC rpc)
@@ -412,7 +412,7 @@ namespace TownOfUs.Roles
                         }
                         else
                         {
-                            ModifierText.text = "<size=4>特性: " + modifier.Name + "</size>";
+                            ModifierText.text = "<size=4>特性：" + modifier.Name + "</size>";
                         }
                         ModifierText.color = modifier.Color;
 
@@ -452,7 +452,7 @@ namespace TownOfUs.Roles
                         }
                         else
                         {
-                            ModifierText.text = "<size=4>特性: " + modifier.Name + "</size>";
+                            ModifierText.text = "<size=4>特性：" + modifier.Name + "</size>";
                         }
                         ModifierText.color = modifier.Color;
 
@@ -491,7 +491,7 @@ namespace TownOfUs.Roles
                         }
                         else
                         {
-                            ModifierText.text = "<size=4>特性: " + modifier.Name + "</size>";
+                            ModifierText.text = "<size=4>特性：" + modifier.Name + "</size>";
                         }
                         ModifierText.color = modifier.Color;
 

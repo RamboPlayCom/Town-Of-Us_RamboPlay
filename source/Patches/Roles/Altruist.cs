@@ -11,9 +11,9 @@ namespace TownOfUs.Roles
 
         public Altruist(PlayerControl player) : base(player)
         {
-            Name = "殉道者";
-            ImpostorText = () => "Sacrifice yourself to save another";
-            TaskText = () => "Revive a dead body at the cost of your own life.";
+            Name = "殉道师";
+            ImpostorText = () => "舍己救人好市民";
+            TaskText = () => "牺牲自己，换取他人的生命";
             Color = Patches.Colors.Altruist;
             RoleType = RoleEnum.Altruist;
             AddToRoleHistory(RoleType);

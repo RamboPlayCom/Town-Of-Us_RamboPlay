@@ -16,7 +16,7 @@ namespace TownOfUs.Roles
         {
             Name = "管道工";
             ImpostorText = () => "你看我像不像马里奥？";
-            TaskText = () => "开挖管道。";
+            TaskText = () => "可以挖额外的管道";
             Color = Patches.Colors.Impostor;
             LastMined = DateTime.UtcNow;
             RoleType = RoleEnum.Miner;

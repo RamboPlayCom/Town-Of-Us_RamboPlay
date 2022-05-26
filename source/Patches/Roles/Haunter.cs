@@ -20,7 +20,7 @@ namespace TownOfUs.Roles
 
         public Haunter(PlayerControl player) : base(player)
         {
-            Name = "密探";
+            Name = "冤魂";
             ImpostorText = () => "";
             TaskText = () => "完成所有任务来揭发内鬼！";
             Color = Patches.Colors.Haunter;

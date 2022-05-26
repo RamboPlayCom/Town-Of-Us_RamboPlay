@@ -6,8 +6,8 @@ namespace TownOfUs.Roles.Modifiers
     {
         public Drunk(PlayerControl player) : base(player)
         {
-            Name = "Drunk";
-            TaskText = () => "Inverrrrrted contrrrrols";
+            Name = "醉鬼";
+            TaskText = () => "操作是相反的";
             Color = Patches.Colors.Drunk;
             ModifierType = ModifierEnum.Drunk;
         }
