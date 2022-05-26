@@ -308,8 +308,8 @@ namespace TownOfUs.CustomOption
         public static CustomToggleOption NeutralLovers;
 
         public static Func<object, string> PercentFormat { get; } = value => $"{value:0}%";
-        private static Func<object, string> CooldownFormat { get; } = value => $"{value:0.0#}s";
-        private static Func<object, string> MultiplierFormat { get; } = value => $"{value:0.0#}x";
+        private static Func<object, string> CooldownFormat { get; } = value => $"{value:0.0#}秒";
+        private static Func<object, string> MultiplierFormat { get; } = value => $"{value:0.0#}倍";
 
 
         public static void GenerateAll()
@@ -320,7 +320,7 @@ namespace TownOfUs.CustomOption
             Patches.ImportButton = new Import(num++);
 
 
-            CrewInvestigativeRoles = new CustomHeaderOption(num++, "Crewmate Investigative Roles");
+            CrewInvestigativeRoles = new CustomHeaderOption(num++, "船员 — 情报型");
             HaunterOn = new CustomNumberOption(true, num++, "<color=#D3D3D3FF>Haunter</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             InvestigatorOn = new CustomNumberOption(true, num++, "<color=#00B3B3FF>Investigator</color>", 0f, 0f, 100f, 10f,
@@ -336,7 +336,7 @@ namespace TownOfUs.CustomOption
             TrackerOn = new CustomNumberOption(true, num++, "<color=#009900FF>Tracker</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            CrewKillingRoles = new CustomHeaderOption(num++, "Crewmate Killing Roles");
+            CrewKillingRoles = new CustomHeaderOption(num++, "船员 — 击杀型");
             SheriffOn = new CustomNumberOption(true, num++, "<color=#FFFF00FF>Sheriff</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             VeteranOn = new CustomNumberOption(true, num++, "<color=#998040FF>Veteran</color>", 0f, 0f, 100f, 10f,
@@ -344,13 +344,13 @@ namespace TownOfUs.CustomOption
             VigilanteOn = new CustomNumberOption(true, num++, "<color=#FFFF99FF>Vigilante</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            CrewProtectiveRoles = new CustomHeaderOption(num++, "Crewmate Protective Roles");
+            CrewProtectiveRoles = new CustomHeaderOption(num++, "船员 — 保护型");
             AltruistOn = new CustomNumberOption(true, num++, "<color=#660000FF>Altruist</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             MedicOn = new CustomNumberOption(true, num++, "<color=#006600FF>Medic</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            CrewSupportRoles = new CustomHeaderOption(num++, "Crewmate Support Roles");
+            CrewSupportRoles = new CustomHeaderOption(num++, "船员 — 辅助型");
             EngineerOn = new CustomNumberOption(true, num++, "<color=#FFA60AFF>Engineer</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             MayorOn = new CustomNumberOption(true, num++, "<color=#704FA8FF>Mayor</color>", 0f, 0f, 100f, 10f,
@@ -365,7 +365,7 @@ namespace TownOfUs.CustomOption
                 PercentFormat);
 
 
-            NeutralBenignRoles = new CustomHeaderOption(num++, "Neutral Benign Roles");
+            NeutralBenignRoles = new CustomHeaderOption(num++, "中立 — 善良");
             AmnesiacOn = new CustomNumberOption(true, num++, "<color=#80B2FFFF>Amnesiac</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             GuardianAngelOn = new CustomNumberOption(true, num++, "<color=#B3FFFFFF>Guardian Angel</color>", 0f, 0f, 100f, 10f,
@@ -373,7 +373,7 @@ namespace TownOfUs.CustomOption
             SurvivorOn = new CustomNumberOption(true, num++, "<color=#FFE64DFF>Survivor</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            NeutralEvilRoles = new CustomHeaderOption(num++, "Neutral Evil Roles");
+            NeutralEvilRoles = new CustomHeaderOption(num++, "中立 — 邪恶");
             ExecutionerOn = new CustomNumberOption(true, num++, "<color=#8C4005FF>Executioner</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             JesterOn = new CustomNumberOption(true, num++, "<color=#FFBFCCFF>Jester</color>", 0f, 0f, 100f, 10f,
@@ -381,13 +381,13 @@ namespace TownOfUs.CustomOption
             PhantomOn = new CustomNumberOption(true, num++, "<color=#662962FF>Phantom</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            NeutralKillingRoles = new CustomHeaderOption(num++, "Neutral Killing Roles");
+            NeutralKillingRoles = new CustomHeaderOption(num++, "中立 — 杀手");
             ArsonistOn = new CustomNumberOption(true, num++, "<color=#FF4D00FF>Arsonist</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             GlitchOn = new CustomNumberOption(true, num++, "<color=#00FF00FF>The Glitch</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            ImpostorConcealingRoles = new CustomHeaderOption(num++, "Impostor Concealing Roles");
+            ImpostorConcealingRoles = new CustomHeaderOption(num++, "伪装者 — 干扰型");
             GrenadierOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Grenadier</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             MorphlingOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Morphling</color>", 0f, 0f, 100f, 10f,
@@ -395,7 +395,7 @@ namespace TownOfUs.CustomOption
             SwooperOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Swooper</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            ImpostorKillingRoles = new CustomHeaderOption(num++, "Impostor Killing Roles");
+            ImpostorKillingRoles = new CustomHeaderOption(num++, "伪装者 — 击杀型");
             PoisonerOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Poisoner</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             TraitorOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Traitor</color>", 0f, 0f, 100f, 10f,
@@ -403,7 +403,7 @@ namespace TownOfUs.CustomOption
             UnderdogOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Underdog</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            ImpostorSupportRoles = new CustomHeaderOption(num++, "Impostor Support Roles");
+            ImpostorSupportRoles = new CustomHeaderOption(num++, "伪装者 — 辅助型");
             BlackmailerOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Blackmailer</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             JanitorOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Janitor</color>", 0f, 0f, 100f, 10f,
@@ -413,7 +413,7 @@ namespace TownOfUs.CustomOption
             UndertakerOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Undertaker</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            CrewmateModifiers = new CustomHeaderOption(num++, "Crewmate Modifiers");
+            CrewmateModifiers = new CustomHeaderOption(num++, "船员 — 附加特性");
             BaitOn = new CustomNumberOption(true, num++, "<color=#00B3B3FF>Bait</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             DiseasedOn = new CustomNumberOption(true, num++, "<color=#808080FF>Diseased</color>", 0f, 0f, 100f, 10f,
@@ -421,7 +421,7 @@ namespace TownOfUs.CustomOption
             TorchOn = new CustomNumberOption(true, num++, "<color=#FFFF99FF>Torch</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            GlobalModifiers = new CustomHeaderOption(num++, "Global Modifiers");
+            GlobalModifiers = new CustomHeaderOption(num++, "全体 — 附加特性");
             ButtonBarryOn = new CustomNumberOption(true, num++, "<color=#E600FFFF>Button Barry</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             DrunkOn = new CustomNumberOption(true, num++, "<color=#758000FF>Drunk</color>", 0f, 0f, 100f, 10f,

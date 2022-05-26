@@ -24,7 +24,7 @@ namespace TownOfUs.CrewmateRoles.MayorMod
             if (PlayerControl.LocalPlayer.Data.IsDead) return;
             if (__instance.TimerText.text.Contains("Can Vote")) return;
             var role = Role.GetRole<Mayor>(PlayerControl.LocalPlayer);
-            __instance.TimerText.text = "Can Vote: " + role.VoteBank + " time(s) | " + __instance.TimerText.text;
+            __instance.TimerText.text = "已存投票: " + role.VoteBank + " 张 | " + __instance.TimerText.text;
         }
 
         public static Dictionary<byte, int> CalculateAllVotes(MeetingHud __instance)
@@ -189,8 +189,8 @@ namespace TownOfUs.CrewmateRoles.MayorMod
             {
                 // __instance.exiledPlayer = __instance.wasTie ? null : __instance.exiledPlayer;
                 var exiledString = exiled == null ? "null" : exiled.PlayerName;
-                PluginSingleton<TownOfUs>.Instance.Log.LogMessage($"Exiled PlayerName = {exiledString}");
-                PluginSingleton<TownOfUs>.Instance.Log.LogMessage($"Was a tie = {tie}");
+                PluginSingleton<TownOfUs>.Instance.Log.LogMessage($"驱逐玩家 = {exiledString}");
+                PluginSingleton<TownOfUs>.Instance.Log.LogMessage($"平票 = {tie}");
             }
         }
 
@@ -224,7 +224,7 @@ namespace TownOfUs.CrewmateRoles.MayorMod
                         var playerInfo = GameData.Instance.GetPlayerById(voteState.VoterId);
                         if (playerInfo == null)
                         {
-                            Debug.LogError(string.Format("Couldn't find player info for voter: {0}",
+                            Debug.LogError(string.Format("投票者的信息无法获取: {0}",
                                 voteState.VoterId));
                         }
                         else if (i == 0 && voteState.SkippedVote)

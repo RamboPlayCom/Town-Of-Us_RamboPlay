@@ -35,7 +35,7 @@ namespace TownOfUs.CrewmateRoles.SeerMod
                     writer2.Write(PlayerControl.LocalPlayer.PlayerId);
                     AmongUsClient.Instance.FinishRpcImmediately(writer2);
 
-                    System.Console.WriteLine(CustomGameOptions.ShieldBreaks + "- shield break");
+                    System.Console.WriteLine(CustomGameOptions.ShieldBreaks + "- 护盾破碎");
                     if (CustomGameOptions.ShieldBreaks)
                         role.LastInvestigated = DateTime.UtcNow;
                     StopKill.BreakShield(PlayerControl.LocalPlayer.GetMedic().Player.PlayerId, PlayerControl.LocalPlayer.PlayerId, CustomGameOptions.ShieldBreaks);

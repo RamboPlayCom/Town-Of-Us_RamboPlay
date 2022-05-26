@@ -16,7 +16,7 @@ namespace TownOfUs
             position.AdjustPosition();
 
             __instance.text.text =
-                "<color=#00FF00FF>我们的小镇 v" + TownOfUs.VersionString + "</color>\n" +
+                "<color=#00FF00FF>我们的小镇 " + TownOfUs.VersionString + "</color>\n" +
                 $"延迟: {AmongUsClient.Instance.Ping}毫秒\n" +
                 (!MeetingHud.Instance
                     ? "<color=#1a75ff>本地帽子</color>" : "") +

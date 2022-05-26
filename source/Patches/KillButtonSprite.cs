@@ -105,7 +105,7 @@ namespace TownOfUs
             {
                 __instance.KillButton.graphic.sprite = Kill;
                 __instance.KillButton.buttonLabelText.gameObject.SetActive(true);
-                __instance.KillButton.buttonLabelText.text = "Kill";
+                __instance.KillButton.buttonLabelText.text = "击杀";
                 flag = PlayerControl.LocalPlayer.Is(RoleEnum.Sheriff);
             }
 

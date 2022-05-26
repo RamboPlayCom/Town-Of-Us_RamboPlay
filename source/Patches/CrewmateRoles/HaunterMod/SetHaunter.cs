@@ -46,7 +46,7 @@ namespace TownOfUs.CrewmateRoles.HaunterMod
                 RemoveTasks(PlayerControl.LocalPlayer);
                 PlayerControl.LocalPlayer.MyPhysics.ResetMoveState();
 
-                System.Console.WriteLine("Become Haunter - Haunter");
+                System.Console.WriteLine("变成了冤魂");
 
                 PlayerControl.LocalPlayer.gameObject.layer = LayerMask.NameToLayer("Players");
 

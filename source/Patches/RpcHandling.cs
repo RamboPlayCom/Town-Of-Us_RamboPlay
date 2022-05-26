@@ -916,7 +916,7 @@ namespace TownOfUs
                         {
                             PlayerControl.LocalPlayer.MyPhysics.ResetMoveState();
                         }
-                        System.Console.WriteLine("Become Haunter - Users");
+                        System.Console.WriteLine("变成冤魂的玩家");
                         break;
                     case CustomRPC.CatchHaunter:
                         var haunterPlayer = Utils.PlayerById(reader.ReadByte());
