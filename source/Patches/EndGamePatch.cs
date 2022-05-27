@@ -37,7 +37,7 @@ namespace TownOfUs.Patches {
                 {
                     if (role.Value == RoleEnum.Crewmate) {playerRole += "<color=#"+Patches.Colors.Crewmate.ToHtmlStringRGBA()+">船员</color> > ";}
                     else if (role.Value == RoleEnum.Impostor) {playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">伪装者</color> > ";}
-                    else if (role.Value == RoleEnum.Altruist) {playerRole += "<color=#"+Patches.Colors.Altruist.ToHtmlStringRGBA()+">殉道师</color> > ";}
+                    else if (role.Value == RoleEnum.Altruist) {playerRole += "<color=#"+Patches.Colors.Altruist.ToHtmlStringRGBA()+">殉道者</color> > ";}
                     else if (role.Value == RoleEnum.Engineer) {playerRole += "<color=#"+Patches.Colors.Engineer.ToHtmlStringRGBA()+">工程师</color> > ";}
                     else if (role.Value == RoleEnum.Investigator) {playerRole += "<color=#"+Patches.Colors.Investigator.ToHtmlStringRGBA()+">侦探</color> > ";}
                     else if (role.Value == RoleEnum.Mayor) {playerRole += "<color=#"+Patches.Colors.Mayor.ToHtmlStringRGBA()+">市长</color> > ";}
