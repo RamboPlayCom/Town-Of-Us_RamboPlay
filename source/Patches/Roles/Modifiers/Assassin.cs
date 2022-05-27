@@ -42,7 +42,7 @@ namespace TownOfUs.Roles.Modifiers
             if (CustomGameOptions.SpyOn > 0) ColorMapping.Add("特工", Colors.Spy);
             if (CustomGameOptions.SnitchOn > 0 && !CustomGameOptions.AssassinSnitchViaCrewmate) ColorMapping.Add("密探", Colors.Snitch);
             if (CustomGameOptions.AltruistOn > 0) ColorMapping.Add("殉道者", Colors.Altruist);
-            if (CustomGameOptions.VigilanteOn > 0) ColorMapping.Add("赌怪", Colors.Vigilante);
+            if (CustomGameOptions.VigilanteOn > 0) ColorMapping.Add("侠客", Colors.Vigilante);
             if (CustomGameOptions.VeteranOn > 0) ColorMapping.Add("老兵", Colors.Veteran);
             if (CustomGameOptions.TrackerOn > 0) ColorMapping.Add("追踪者", Colors.Tracker);
             if (CustomGameOptions.TransporterOn > 0) ColorMapping.Add("传送师", Colors.Transporter);
