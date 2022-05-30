@@ -153,7 +153,7 @@ namespace TownOfUs.CustomOption
                 if (title != null)
                 {
                     title.GetComponent<TextTranslatorTMP>().Destroy();
-                    title.GetComponent<TMPro.TextMeshPro>().m_text = "Town Of Us Settings";
+                    title.GetComponent<TMPro.TextMeshPro>().m_text = "我们的小镇 — 设置";
                 }
                 var sliderInner = gameGroup?.FindChild("SliderInner");
                 if (sliderInner != null)

@@ -34,7 +34,7 @@ namespace TownOfUs.CrewmateRoles.MedicMod
                 var exPlayer = medic.exShielded;
                 if (exPlayer != null)
                 {
-                    System.Console.WriteLine(exPlayer.name + " is ex-Shielded and unvisored");
+                    System.Console.WriteLine(exPlayer.name + " 的护盾和效果消失了");
                     exPlayer.MyRend.material.SetColor("_VisorColor", Palette.VisorColor);
                     exPlayer.MyRend.material.SetFloat("_Outline", 0f);
                     medic.exShielded = null;

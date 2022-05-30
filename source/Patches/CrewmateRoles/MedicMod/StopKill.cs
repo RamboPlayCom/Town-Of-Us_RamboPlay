@@ -32,7 +32,7 @@ namespace TownOfUs.CrewmateRoles.MedicMod
                 {
                     ((Medic) role).ShieldedPlayer = null;
                     ((Medic) role).exShielded = player;
-                    System.Console.WriteLine(player.name + " Is Ex-Shielded");
+                    System.Console.WriteLine(player.name + " 的护盾消失了");
                 }
 
             player.MyRend.material.SetColor("_VisorColor", Palette.VisorColor);

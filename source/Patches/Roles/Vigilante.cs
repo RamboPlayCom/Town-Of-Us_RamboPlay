@@ -20,7 +20,7 @@ namespace TownOfUs.Roles
 
         public Vigilante(PlayerControl player) : base(player)
         {
-            Name = "赌怪";
+            Name = "侠客";
             ImpostorText = () => "生命就是一场豪赌";
             TaskText = () => "在会议中猜测内鬼的职业来杀死他们";
             Color = Patches.Colors.Vigilante;

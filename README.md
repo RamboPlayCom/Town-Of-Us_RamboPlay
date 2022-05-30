@@ -1,5 +1,5 @@
 
-![LOGO](./Images/TownOfUsBanner.png)
+![LOGO](./Images/Banner.png)
 
 ##  我们的小镇说明书
 
