@@ -59,8 +59,11 @@ namespace TownOfUs.Roles
             {
                 if (CustomGameOptions.ArsonistOn > 0) ColorMapping.Add("纵火狂", Colors.Arsonist);
                 if (CustomGameOptions.GlitchOn > 0) ColorMapping.Add("混沌", Colors.Glitch);
-                if (CustomGameOptions.GlitchOn > 0) ColorMapping.Add("天启", Colors.Juggernaut);
+                if (CustomGameOptions.PlaguebearerOn > 0) ColorMapping.Add("瘟疫之源", Colors.Plaguebearer);
+                if (CustomGameOptions.WerewolfOn > 0) ColorMapping.Add("天狼族", Colors.Werewolf);
+                ColorMapping.Add("天启", Colors.Juggernaut);
             }
+            if (CustomGameOptions.VigilanteGuessLovers && CustomGameOptions.LoversOn > 0) ColorMapping.Add("恋人", Colors.Lovers);
 
             // Sorts the list alphabetically. 
             SortedColorMapping = ColorMapping.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);

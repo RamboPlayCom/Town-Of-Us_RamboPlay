@@ -39,9 +39,9 @@ namespace TownOfUs.Patches {
                     else if (role.Value == RoleEnum.Impostor) {playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">伪装者</color> > ";}
                     else if (role.Value == RoleEnum.Altruist) {playerRole += "<color=#"+Patches.Colors.Altruist.ToHtmlStringRGBA()+">殉道者</color> > ";}
                     else if (role.Value == RoleEnum.Engineer) {playerRole += "<color=#"+Patches.Colors.Engineer.ToHtmlStringRGBA()+">工程师</color> > ";}
-                    else if (role.Value == RoleEnum.Investigator) {playerRole += "<color=#"+Patches.Colors.Investigator.ToHtmlStringRGBA()+">侦探</color> > ";}
+                    else if (role.Value == RoleEnum.Investigator) {playerRole += "<color=#"+Patches.Colors.Investigator.ToHtmlStringRGBA()+">调查员</color> > ";}
                     else if (role.Value == RoleEnum.Mayor) {playerRole += "<color=#"+Patches.Colors.Mayor.ToHtmlStringRGBA()+">市长</color> > ";}
-                    else if (role.Value == RoleEnum.Medic) {playerRole += "<color=#"+Patches.Colors.Medic.ToHtmlStringRGBA()+">医生</color> > ";}
+                    else if (role.Value == RoleEnum.Medic) {playerRole += "<color=#"+Patches.Colors.Medic.ToHtmlStringRGBA()+">法医</color> > ";}
                     else if (role.Value == RoleEnum.Sheriff) {playerRole += "<color=#"+Patches.Colors.Sheriff.ToHtmlStringRGBA()+">警长</color> > ";}
                     else if (role.Value == RoleEnum.Swapper) {playerRole += "<color=#"+Patches.Colors.Swapper.ToHtmlStringRGBA()+">换票师</color> > ";}
                     else if (role.Value == RoleEnum.TimeLord) {playerRole += "<color=#"+Patches.Colors.TimeLord.ToHtmlStringRGBA()+">时间领主</color> > ";}
@@ -64,7 +64,7 @@ namespace TownOfUs.Patches {
                     else if (role.Value == RoleEnum.Underdog) {playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">潜伏者</color> > ";}
                     else if (role.Value == RoleEnum.Undertaker) {playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">送葬者</color> > "; }
                     else if (role.Value == RoleEnum.Haunter) { playerRole += "<color=#"+Patches.Colors.Haunter.ToHtmlStringRGBA()+">冤魂</color> > "; }
-                    // else if (role.Value == RoleEnum.Grenadier) { playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">掷弹兵</color> > "; } 重复了啊
+                    //else if (role.Value == RoleEnum.Grenadier) { playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">掷弹兵</color> > "; } 重复的
                     else if (role.Value == RoleEnum.Veteran) { playerRole += "<color=#"+Patches.Colors.Veteran.ToHtmlStringRGBA()+">老兵</color> > "; }
                     else if (role.Value == RoleEnum.Amnesiac) { playerRole += "<color=#"+Patches.Colors.Amnesiac.ToHtmlStringRGBA()+">失忆者</color> > "; }
                     else if (role.Value == RoleEnum.Juggernaut) { playerRole += "<color=#"+Patches.Colors.Juggernaut.ToHtmlStringRGBA()+">天启</color> > "; }
@@ -72,11 +72,16 @@ namespace TownOfUs.Patches {
                     else if (role.Value == RoleEnum.Poisoner) { playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">绝命毒师</color> > "; }
                     else if (role.Value == RoleEnum.Transporter) { playerRole += "<color=#" + Patches.Colors.Transporter.ToHtmlStringRGBA() + ">传送师</color> > "; }
                     else if (role.Value == RoleEnum.Traitor) { playerRole += "<color=#" + Patches.Colors.Impostor.ToHtmlStringRGBA() + ">背叛者</color> > "; }
-                    else if (role.Value == RoleEnum.Medium) { playerRole += "<color=#" + Patches.Colors.Medium.ToHtmlStringRGBA() + ">通灵师</color> > "; }
+                    else if (role.Value == RoleEnum.Medium) { playerRole += "<color=#" + Patches.Colors.Medium.ToHtmlStringRGBA() + ">招魂师</color> > "; }
+                    else if (role.Value == RoleEnum.Trapper) { playerRole += "<color=#" + Patches.Colors.Trapper.ToHtmlStringRGBA() + ">陷阱师</color> > "; }
                     else if (role.Value == RoleEnum.Survivor) { playerRole += "<color=#" + Patches.Colors.Survivor.ToHtmlStringRGBA() + ">幸存者</color> > "; }
                     else if (role.Value == RoleEnum.GuardianAngel) { playerRole += "<color=#" + Patches.Colors.GuardianAngel.ToHtmlStringRGBA() + ">守护天使</color> > "; }
                     else if (role.Value == RoleEnum.Mystic) { playerRole += "<color=#" + Patches.Colors.Mystic.ToHtmlStringRGBA() + ">灵媒</color> > "; }
                     else if (role.Value == RoleEnum.Blackmailer) { playerRole += "<color=#" + Patches.Colors.Impostor.ToHtmlStringRGBA() + ">勒索者</color> > "; }
+                    else if (role.Value == RoleEnum.Plaguebearer) { playerRole += "<color=#" + Patches.Colors.Plaguebearer.ToHtmlStringRGBA() + ">瘟疫之源</color> > "; }
+                    else if (role.Value == RoleEnum.Pestilence) { playerRole += "<color=#" + Patches.Colors.Pestilence.ToHtmlStringRGBA() + ">万疫之神</color> > "; }
+                    else if (role.Value == RoleEnum.Werewolf) { playerRole += "<color=#" + Patches.Colors.Werewolf.ToHtmlStringRGBA() + ">天狼族</color> > "; }
+                    else if (role.Value == RoleEnum.Detective) { playerRole += "<color=#" + Patches.Colors.Detective.ToHtmlStringRGBA() + ">侧写师</color> > "; }
                 }
                 playerRole = playerRole.Remove(playerRole.Length - 3);
 
@@ -84,12 +89,12 @@ namespace TownOfUs.Patches {
                     playerRole += " (<color=#" + Patches.Colors.Giant.ToHtmlStringRGBA() + ">巨人</color>)";
                 } else if (playerControl.Is(ModifierEnum.ButtonBarry)) {
                     playerRole += " (<color=#" + Patches.Colors.ButtonBarry.ToHtmlStringRGBA() + ">执钮人</color>)";
+                } else if (playerControl.Is(ModifierEnum.Blind)) {
+                    playerRole += " (<color=#" + Patches.Colors.Blind.ToHtmlStringRGBA() + ">盲人</color>)";
                 } else if (playerControl.Is(ModifierEnum.Bait)) {
                     playerRole += " (<color=#" + Patches.Colors.Bait.ToHtmlStringRGBA() + ">诱饵</color>)";
                 } else if (playerControl.Is(ModifierEnum.Diseased)) {
                     playerRole += " (<color=#" + Patches.Colors.Diseased.ToHtmlStringRGBA() + ">病人</color>)";
-                } else if (playerControl.Is(ModifierEnum.Drunk)) {
-                    playerRole += " (<color=#" + Patches.Colors.Drunk.ToHtmlStringRGBA() + ">醉鬼</color>)";
                 } else if (playerControl.Is(ModifierEnum.Flash)) {
                     playerRole += " (<color=#" + Patches.Colors.Flash.ToHtmlStringRGBA() + ">闪电侠</color>)";
                 } else if (playerControl.Is(ModifierEnum.Tiebreaker)) {

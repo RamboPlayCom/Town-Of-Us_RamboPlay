@@ -35,8 +35,8 @@ namespace TownOfUs.CrewmateRoles.MedicMod
                     System.Console.WriteLine(player.name + " 的护盾消失了");
                 }
 
-            player.MyRend.material.SetColor("_VisorColor", Palette.VisorColor);
-            player.MyRend.material.SetFloat("_Outline", 0f);
+            player.myRend().material.SetColor("_VisorColor", Palette.VisorColor);
+            player.myRend().material.SetFloat("_Outline", 0f);
         }
     }
 }

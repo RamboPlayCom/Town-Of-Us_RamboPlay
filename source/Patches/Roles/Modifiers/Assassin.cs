@@ -35,9 +35,9 @@ namespace TownOfUs.Roles.Modifiers
             if (CustomGameOptions.SheriffOn > 0) ColorMapping.Add("警长", Colors.Sheriff);
             if (CustomGameOptions.EngineerOn > 0) ColorMapping.Add("工程师", Colors.Engineer);
             if (CustomGameOptions.SwapperOn > 0) ColorMapping.Add("换票师", Colors.Swapper);
-            if (CustomGameOptions.InvestigatorOn > 0) ColorMapping.Add("侦探", Colors.Investigator);
+            if (CustomGameOptions.InvestigatorOn > 0) ColorMapping.Add("调查员", Colors.Investigator);
             if (CustomGameOptions.TimeLordOn > 0) ColorMapping.Add("时间领主", Colors.TimeLord);
-            if (CustomGameOptions.MedicOn > 0) ColorMapping.Add("医生", Colors.Medic);
+            if (CustomGameOptions.MedicOn > 0) ColorMapping.Add("法医", Colors.Medic);
             if (CustomGameOptions.SeerOn > 0) ColorMapping.Add("预言家", Colors.Seer);
             if (CustomGameOptions.SpyOn > 0) ColorMapping.Add("特工", Colors.Spy);
             if (CustomGameOptions.SnitchOn > 0 && !CustomGameOptions.AssassinSnitchViaCrewmate) ColorMapping.Add("密探", Colors.Snitch);
@@ -45,9 +45,11 @@ namespace TownOfUs.Roles.Modifiers
             if (CustomGameOptions.VigilanteOn > 0) ColorMapping.Add("侠客", Colors.Vigilante);
             if (CustomGameOptions.VeteranOn > 0) ColorMapping.Add("老兵", Colors.Veteran);
             if (CustomGameOptions.TrackerOn > 0) ColorMapping.Add("追踪者", Colors.Tracker);
+            if (CustomGameOptions.TrapperOn > 0) ColorMapping.Add("陷阱师", Colors.Trapper);
             if (CustomGameOptions.TransporterOn > 0) ColorMapping.Add("传送师", Colors.Transporter);
-            if (CustomGameOptions.MediumOn > 0) ColorMapping.Add("通灵师", Colors.Medium);
+            if (CustomGameOptions.MediumOn > 0) ColorMapping.Add("招魂师", Colors.Medium);
             if (CustomGameOptions.MysticOn > 0) ColorMapping.Add("灵媒", Colors.Mystic);
+            if (CustomGameOptions.DetectiveOn > 0) ColorMapping.Add("侧写师", Colors.Detective);
 
             // Add Neutral roles if enabled
             if (CustomGameOptions.AssassinGuessNeutralBenign)
@@ -65,7 +67,9 @@ namespace TownOfUs.Roles.Modifiers
             {
                 if (CustomGameOptions.ArsonistOn > 0) ColorMapping.Add("纵火狂", Colors.Arsonist);
                 if (CustomGameOptions.GlitchOn > 0) ColorMapping.Add("混沌", Colors.Glitch);
-                if (CustomGameOptions.GlitchOn > 0) ColorMapping.Add("天启", Colors.Juggernaut);
+                if (CustomGameOptions.PlaguebearerOn > 0) ColorMapping.Add("瘟疫之源", Colors.Plaguebearer);
+                if (CustomGameOptions.WerewolfOn > 0) ColorMapping.Add("天狼族", Colors.Werewolf);
+                ColorMapping.Add("天启", Colors.Juggernaut);
             }
 
             // Add vanilla crewmate if enabled
@@ -74,6 +78,7 @@ namespace TownOfUs.Roles.Modifiers
             if (CustomGameOptions.AssassinGuessModifiers && CustomGameOptions.BaitOn > 0) ColorMapping.Add("诱饵", Colors.Bait);
             if (CustomGameOptions.AssassinGuessModifiers && CustomGameOptions.DiseasedOn > 0) ColorMapping.Add("病人", Colors.Diseased);
             if (CustomGameOptions.AssassinGuessModifiers && CustomGameOptions.TorchOn > 0) ColorMapping.Add("火炬", Colors.Torch);
+            if (CustomGameOptions.AssassinGuessLovers && CustomGameOptions.LoversOn > 0) ColorMapping.Add("恋人", Colors.Lovers);
 
             // Sorts the list alphabetically. 
             SortedColorMapping = ColorMapping.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);

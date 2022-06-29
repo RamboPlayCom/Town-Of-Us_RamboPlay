@@ -1,4 +1,3 @@
-
 ![LOGO](./Images/Banner.png)
 
 ##  我们的小镇说明书
@@ -282,7 +281,3 @@
 ## 恋人：恋人的目标是携手活到最后，成为最后三人则直接获胜，一定概率人狼恋
 
 ·恋人在跑图阶段可使用右上角消息框聊天窗口对话；如有需要可以使用此功能（开会阶段无法使用因为其他人也可以用）以避免经常被带死
-
-#
-<p align="center">This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC.</p>
-<p align="center">© Innersloth LLC.</p>
