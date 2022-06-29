@@ -16,16 +16,16 @@ namespace TownOfUs.CrewmateRoles.TrapperMod
             if (trapperRole.trappedPlayers.Contains(RoleEnum.Trapper)) trapperRole.trappedPlayers.Remove(RoleEnum.Trapper);
             if (trapperRole.trappedPlayers.Count == 0)
             { 
-                DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, "No players entered any of your traps");
+                DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, "还没有人触发你的陷阱");
                 return;
             }
             if (trapperRole.trappedPlayers.Count < CustomGameOptions.MinAmountOfPlayersInTrap)
             {
-                DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, "Not enough players triggered your traps");
+                DestroyableSingleton<HudManager>.Instance.Chat.AddChat(PlayerControl.LocalPlayer, "触发陷阱的玩家数不足");
                 return;
             }
 
-            string message = "Roles caught in your trap:\n";
+            string message = "触发陷阱的角色:\n";
             foreach (RoleEnum role in trapperRole.trappedPlayers.OrderBy(x=> Guid.NewGuid()))
             {
                 message += $" {role},";

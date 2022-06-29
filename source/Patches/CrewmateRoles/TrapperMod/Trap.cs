@@ -71,7 +71,7 @@ namespace TownOfUs.CrewmateRoles.TrapperMod
         public static Trap CreateTrap(this Vector3 location)
         {
             var TrapPref = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            TrapPref.name = "Trap";
+            TrapPref.name = "陷阱";
             TrapPref.transform.localScale = new Vector3(CustomGameOptions.TrapSize, CustomGameOptions.TrapSize, CustomGameOptions.TrapSize);
             GameObject.Destroy(TrapPref.GetComponent<SphereCollider>());
             TrapPref.GetComponent<MeshRenderer>().material = Roles.Trapper.trapMaterial;
